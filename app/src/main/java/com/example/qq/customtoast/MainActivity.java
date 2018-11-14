@@ -20,14 +20,14 @@ public class MainActivity extends AppCompatActivity {
         button = findViewById(R.id.but1);
 
         LayoutInflater inflater = getLayoutInflater();
-        final View viewLayout = inflater.inflate(R.layout.custom_toast,
-                (ViewGroup) findViewById(R.id.relativeLayout1));
+        final View viewLayout = inflater.inflate(R.layout.custom_toast, null);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast toast = new Toast(getApplicationContext());
                 toast.setGravity(Gravity.CENTER,0,0);
+                toast.setDuration(Toast.LENGTH_LONG);
                 toast.setView(viewLayout);
                 toast.show();
             }

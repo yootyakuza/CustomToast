@@ -1,41 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:id="@+id/relativeLayout1"
-    android:background="@android:color/white">
-
-    <TextView
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/textView1"
+    android:orientation="horizontal"
+    android:layout_margin="5dp"
+    android:padding="10dp"
+    android:layout_gravity="center_horizontal">
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_width="fill_parent"
-        android:text="Custom Toast"
-        android:gravity="center"
-        android:layout_marginTop="20dp"
-        android:textColor="@android:color/black">
-    </TextView>
+        android:background="@drawable/mycustom_toast_border">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_height="wrap_content"
-        android:layout_width="fill_parent"
-        android:text="This is the demo of Custom Toast Notification"
-        android:gravity="center"
-        android:layout_below="@+id/textView1"
-        android:textColor="@android:color/black">
-    </TextView>
+        <ImageView
+            android:id="@+id/imageView1"
+            android:src="@drawable/warning"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:text="Android Tutorial Custom Toast"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
 
-    <ImageView
-        android:layout_height="100dp"
-        android:layout_width="100dp"
-        android:src="@drawable/warning"
-        android:layout_below="@+id/textView2"
-        android:layout_margin="30dp"
-        android:layout_marginBottom="20dp"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/imageView1">
-    </ImageView>
-
-</RelativeLayout>
+</LinearLayout>
